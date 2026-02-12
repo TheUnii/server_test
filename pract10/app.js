@@ -13,7 +13,7 @@ app.use(express.urlencoded())
 
 app.post("/letter", (req, res) => {
     const formData = req.body
-    res.render("letter", formData)
+    res.render("result", formData)
 })
 
 
