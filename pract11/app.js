@@ -35,7 +35,7 @@ app.post('/generate', (req, res) => {
     });
 });
 
-// Запуск сервера
+// Запуск сервераs
 app.listen(port, () => {
     console.log(`Сервер запущен на http://localhost:${port}`);
 });
