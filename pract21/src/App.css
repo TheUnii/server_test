@@ -1,0 +1,89 @@
+
+:root {
+  font-size: 16px;
+  --background: linear-gradient(92.33deg, #196B78 0.12%, #138496 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #EDEEF3;
+}
+
+header {
+  background: var(--background);
+  text-align: center;
+  width: 100%;
+  height: 295px;
+  padding-top: 4rem;
+
+  position: relative;
+}
+
+header h1 {
+  color: #CCF8FF;
+  font-size: 4.5rem;
+}
+
+header p {
+  color: #CCF8FF;
+  opacity: 0.75;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+header input {
+  width: min(820px, 100%);
+  height: 64px;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+main {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+main .card {
+  background-color: #fff;
+  width: 316px;
+  height: 184px;
+  border: 1px solid #DEE2E6;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 2rem;
+}
+
+.card p:first-child {
+  font-size: 3rem;
+}
+
+.card p:nth-child(2) {
+  font-size: 1rem;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.card p:last-child {
+  font-size: 0.8rem;
+  color: #3F444A;
+}
