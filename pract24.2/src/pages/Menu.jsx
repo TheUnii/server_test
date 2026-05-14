@@ -1,0 +1,27 @@
+import { pizzas } from '../data';
+import PizzaItem from '../components/PizzaItem';
+
+export default function Menu() {
+    return (
+        <div style={{
+            border: '1px solid #ddd',
+            borderRadius: '8px',
+            padding: '16px',
+            margin: '10px',
+            textAlign: 'center'
+            }}>
+            <h2>Наше меню</h2>
+            <p>Выберите пиццу и добавьте в корзину!</p>
+        <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: '20px'
+        }}>
+            {pizzas.map((pizza) => (
+                <PizzaItem key={pizza.id} pizza={pizza} />
+            ))}
+        </div>
+    </div>
+    );
+}
