@@ -118,3 +118,92 @@ class Password {
         return firstThree + stars;
     }
 }
+
+//Задание 8
+class SimpleCalendar {
+    constructor(day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+    
+    getDateString() {
+        const Day = this.day < 10 ? `0${this.day}` : this.day;
+        const Month = this.month < 10 ? `0${this.month}` : this.month;
+        return `${Day}.${Month}.${this.year}`;
+    }
+}
+
+const date1 = new SimpleCalendar(5, 6, 2024);
+const date2 = new SimpleCalendar(15, 11, 2023);
+console.log(date1.getDateString());
+console.log(date2.getDateString());
+
+
+//Задание 9
+class Calculator {
+    calculate(a, b, oper) {
+        if (oper === "+") {
+            return a + b;
+        } else if (oper === "-") {
+            return a - b;
+        } else if (oper === "*") {
+            return a * b;
+        } else if (oper === "/") {
+            if (b !== 0) {
+                return a / b;
+            } else {
+                return null;
+            }
+        } else {
+            return null;
+        }
+    }
+}
+
+const calc = new Calculator();
+console.log(calc.calculate(10, 5, "+"));
+console.log(calc.calculate(10, 5, "/"));
+console.log(calc.calculate(10, 0, "/"));
+
+//Задание 10
+class Player {
+    constructor(name, health = 100, level = 1) {
+        this.name = name;
+        this.health = health;
+        this.level = level;
+    }
+    
+    takeDamage(amount) {
+        this.health -= amount;
+        if (this.health < 0) {
+            this.health = 0;
+        }
+        console.log(`Здоровье: ${this.health}`);
+    }
+    
+    heal(amount) {
+        this.health += amount;
+        if (this.health > 100) {
+            this.health = 100;
+        }
+        console.log(`Здоровье: ${this.health}`);
+    }
+    
+    levelUp() {
+        this.level += 1;
+        console.log(`Текущий уровень: ${this.level}`);
+    }
+    
+    getState() {
+        console.log(`Игрок: ${this.name}, Здоровье: ${this.health}, Уровень: ${this.level}`);
+    }
+}
+
+const player1 = new Player("Артём");
+player1.getState();
+player1.takeDamage(30);
+player1.takeDamage(80);
+player1.heal(50);
+player1.levelUp();
+player1.getState();
